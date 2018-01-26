@@ -12,7 +12,8 @@ class DashboardContainer extends React.Component {
   todoCreate(todo){
     todo.id = uuid();
     this.props.app.setState(state => ({
-      todos: [...state.todos, todo]
+      todos: [...state.todos, todo],
+      leftToDo: state.leftToDo++
     }));
   }
 

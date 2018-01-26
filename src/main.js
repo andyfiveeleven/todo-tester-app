@@ -33,8 +33,8 @@ class App extends React.Component {
       <main>
         <BrowserRouter>
           <section>
-            <Route exact path="/" component={() => <DashboardContainer app={this.getApp()} />} /> //everytime we hit the dashboard, it calls get app
             <Route exact path="/about" component={AboutContainer} />
+            <Route exact path="/" component={() => <DashboardContainer app={this.getApp()} />} /> 
           </section>
         </BrowserRouter>
       </main>
