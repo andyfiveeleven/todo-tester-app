@@ -1,19 +1,20 @@
 import React from 'react';
-import TodoCreateForm from '../todo-create-form';
+import TodoForm from '../todo-form';
 
 class TodoList extends React.Component{
   render(){
     return(
-      <section className='expense-list'>
+      <section className='todo-list'>
         <ul>
           {this.props.todos.map((item, i) =>
             <li key={i}>
+              <button onClick={() => this.props.todoRemove(item)}>x</button>
               <div>
                 <p>title: {item.title}</p>
                 <p>urgency: {item.urgency}</p>
               </div>
 
-              <TodoCreateForm
+              <TodoForm
                 todo={item}
                 submitTitle='update todo'
                 handleSubmit={(todo) => {
@@ -23,8 +24,10 @@ class TodoList extends React.Component{
                 />
             </li>
         )}
-        </ul
+        </ul>
       </section>
     )
   }
 }
+
+export defalt TodoList 
