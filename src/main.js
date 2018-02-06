@@ -13,7 +13,6 @@ class App extends React.Component {
       leftToDo: 0,
       todos: []
     }
-
     this.getApp = this.getApp.bind(this);//now this is part of the app component when we create it
   }
 
@@ -24,7 +23,7 @@ class App extends React.Component {
     }
   }
 
-  componentDidUpdate(){ // every tiem we update this component, console log\
+  componentDidUpdate(){ // every tiem we update this component, console log
     console.log('STATE__', this.state);
   }
 
@@ -34,12 +33,11 @@ class App extends React.Component {
         <BrowserRouter>
           <section>
             <Route exact path="/about" component={AboutContainer} />
-            <Route exact path="/" component={() => <DashboardContainer app={this.getApp()} />} /> 
+            <Route exact path="/" component={() => <DashboardContainer app={this.getApp()} />} />
           </section>
         </BrowserRouter>
       </main>
     )
   }
 }
-
 ReactDom.render(<App />, document.getElementById('root'));
