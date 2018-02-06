@@ -7,7 +7,7 @@ class TodoForm extends React.Component{
     let title = props.todo ? props.todo.title : '';
     let urgency = props.todo ? props.todo.urgency : '';
 
-    this.state = { title, price };
+    this.state = { title, urgency };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -41,6 +41,7 @@ class TodoForm extends React.Component{
       <form className='expense-form' onSubmit={this.handleSubmit}>
         <input
           name='title'
+          placeholder='todo title'
           type='text'
           value={this.state.title}
           onChange={this.handleChange}
@@ -48,6 +49,7 @@ class TodoForm extends React.Component{
 
         <input
           name='urgency'
+          placeholder='urgency'
           type='text'
           value={this.state.urgency}
           onChange={this.handleChange}

@@ -2,8 +2,8 @@ import React from 'react';
 import TodoForm from '../todo-form';
 
 class TodoList extends React.Component{
-  render(){
-    return(
+  render() {
+    return (
       <section className='todo-list'>
         <ul>
           {this.props.todos.map((item, i) =>
@@ -19,7 +19,7 @@ class TodoList extends React.Component{
                 submitTitle='update todo'
                 handleSubmit={(todo) => {
                   todo.id = item.id;
-                  this.props.todoUpdate(expense);
+                  this.props.todoUpdate(todo);
                 }}
                 />
             </li>
@@ -30,4 +30,4 @@ class TodoList extends React.Component{
   }
 }
 
-export defalt TodoList 
+export default TodoList

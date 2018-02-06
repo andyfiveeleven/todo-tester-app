@@ -9,8 +9,8 @@ class Navbar extends React.Component {
         <h1> ToDo App </h1>
         <nav>
           <ul>
-            <li><Link to='/'>Dashboard</link></li>
-            <li><Link to='/about'>About Me</link><li>
+            <li><Link to='/'>Dashboard</Link></li>
+            <li><Link to='/about'>About Me</Link></li>
           </ul>
         </nav>
       </header>

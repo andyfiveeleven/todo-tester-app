@@ -2,7 +2,7 @@ import React from 'react';
 import uuid from 'uuid/v1';
 
 import Modal from '../modal';
-import NavBar from '../navbar';
+import Navbar from '../navbar';
 import TodoList from '../todo-list';
 import TodoForm from '../todo-form';
 
@@ -13,7 +13,7 @@ class DashboardContainer extends React.Component {
     super(props);
 
     this.state = {
-    showErrors: true}
+      showErrors: true
     }
 
     this.todoCreate = this.todoCreate.bind(this);
@@ -33,7 +33,7 @@ class DashboardContainer extends React.Component {
     let {app} = this.props;
     app.setState(prevState => ({
       todos: prevState.todos.filter((item) => {
-        return item.id !== todos.id
+        return item.id !== todo.id
       })
     }))
   }
@@ -42,7 +42,7 @@ class DashboardContainer extends React.Component {
     let {app} = this.props;
     app.setState(prevState => ({
       todos: prevState.todos.map((item) => {
-        return item.id === todos.id ? expense: item;
+        return item.id === todo.id ? todo: item;
       })
     }));
   }
@@ -60,14 +60,21 @@ class DashboardContainer extends React.Component {
 
         <div>
           <p> todos left: {todosLeft}</p>
+
         </div>
 
         <TodoForm
           handleSubmit={this.todoCreate}
-          submitTitle='add todo'
-        ?>
+          submitTitle='add to-do'
+        />
 
-        {renderIf(todosLeft < 15 && this.state.showErrors,
+        <TodoList
+          todoRemove={this.todoRemove}
+          todoUpdate={this.todoUpdate}
+          todos={app.state.todos}
+        />
+
+        {renderIf(todosLeft > 15 && this.state.showErrors,
           <Modal close={() => this.setState({showErrors: false})}>
             <h1> you have too much left to accomplish </h1>
           </Modal>
