@@ -1,5 +1,9 @@
+import './_navbar.scss';
+
 import React from 'react';
-import {Link} from 'react-router-dom'; //component in react router dom, allows us to make fancy links
+import {Link} from 'react-router-dom';
+
+ //component in react router dom, allows us to make fancy links
 
 class Navbar extends React.Component {
   //this shit is static

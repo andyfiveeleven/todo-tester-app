@@ -1,0 +1,29 @@
+header {
+  border-bottom: 2px solid black;
+  margin-bottom: 1.5vw;
+
+  h1{
+    width: 30%;
+    float: left;
+    display: inline-block;
+    font-size: 5vw;
+    padding: 2vw;
+  }
+
+  nav {
+    display: inline-block;
+    width: 60%;
+    padding: 2vw;
+    font-size: 4vw;
+
+    ul{
+      display: inline-block;
+      float: right;
+
+      li{
+        display: inline-block;
+        margin-left: 1.5vw;
+      }
+    }
+  }
+}
