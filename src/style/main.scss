@@ -1,5 +1,4 @@
-body {
-  background: white;
-  color: black;
-  font-family: helvetica
-}
+@import './lib/vars';
+@import './base/reset';
+// @import './base/base';
+// @import './layout/header';
