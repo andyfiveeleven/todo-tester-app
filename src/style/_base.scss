@@ -1,0 +1,17 @@
+//base stuff
+@import "vars";
+
+button,input[type="submit"] {
+  background: $color-lightgrey;
+  padding: $pad;
+  border: none;
+  border-radius: 3px;
+
+  &:hover {
+    background: $color-grey;
+  }
+
+  &:active {
+    background: $color-darkgrey;
+  }
+}
