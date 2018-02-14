@@ -1,4 +1,5 @@
 import React from 'react'
+import './_todo-form.scss'
 
 class TodoForm extends React.Component{
   constructor(props){
