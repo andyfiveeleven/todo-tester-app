@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoForm from '../todo-form';
+import './_todo-list.scss'
 
 class TodoList extends React.Component{
   render() {
